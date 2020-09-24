@@ -1,0 +1,30 @@
+﻿<div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <h2>Students</h2>
+    @Ajax.ActionLink("All", "All", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "partialDiv",
+    InsertionMode = InsertionMode.Replace
+})
+
+    @Ajax.ActionLink("Top 3", "Top3", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "partialDiv",
+    InsertionMode = InsertionMode.Replace
+})
+
+    @Ajax.ActionLink("Bot 3", "Bot3", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "partialDiv",
+    InsertionMode = InsertionMode.Replace
+})
+
+    <div id="partialDiv">
+
+    </div>
+</div>
